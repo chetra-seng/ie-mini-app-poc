@@ -8,6 +8,6 @@ const config = {
   },
 };
 
-config.paths = { base: `${process.env.BASE_PATH}/ie-mini-app-poc` };
+config.paths = { base: process.argv.includes('dev') ? '' : process.env.BASE_PATH }
 
 export default config;
